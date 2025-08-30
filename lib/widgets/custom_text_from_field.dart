@@ -36,6 +36,7 @@ class _CustomTextFromFieldState extends State<CustomTextFromField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: const TextStyle(color: AppTheme.white),
       onTapOutside: (_) => FocusManager.instance.primaryFocus?.unfocus(),
       autovalidateMode: AutovalidateMode.onUserInteraction,
       controller: widget.controller,
