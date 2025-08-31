@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
+
 import 'package:movies_app/onboarding/onboarding_screens.dart';
 
+
+
+import 'package:movies_app/constants/app_theme.dart';
+import 'package:movies_app/update_profile_screen/update_profile_screen.dart';
+
 void main() {
-  runApp(const MyApp());
+  var app = MoviesApp;
+  runApp(MoviesApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MoviesApp extends StatelessWidget {
+  const MoviesApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-   debugShowCheckedModeBanner: false,
-   routes: {
-    OnboardingScreens.nameroute:(context) => const OnboardingScreens(),
-   },
-   initialRoute: OnboardingScreens.nameroute,
-    
+      debugShowCheckedModeBanner: false,
+      home: UpdateProfileScreen(),
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.dark,
     );
   }
 }
