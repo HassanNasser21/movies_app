@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:movies_app/onboarding/onboarding_screens.dart';
 
-
-
-
 import 'package:movies_app/constants/app_theme.dart';
 import 'package:movies_app/update_profile_screen/update_profile_screen.dart';
 
@@ -21,7 +18,7 @@ class MoviesApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        OnboardingScreens.nameroute:(context)=>OnboardingScreens(),
+        OnboardingScreens.nameroute: (context) => OnboardingScreens(),
       },
       initialRoute: OnboardingScreens.nameroute,
       darkTheme: AppTheme.darkTheme,
