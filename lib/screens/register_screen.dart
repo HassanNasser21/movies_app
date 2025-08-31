@@ -83,12 +83,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   hintText: 'Name',
                   prefixIconImage: 'name',
                   controller: nameController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Name can not be empty';
+                    }
+                    return null;
+                  },
                 ),
                 SizedBox(height: 20),
                 CustomTextFromField(
                   hintText: 'Email',
                   prefixIconImage: 'email',
                   controller: emailController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Email can not be empty';
+                    }
+                    return null;
+                  },
                 ),
                 SizedBox(height: 20),
                 CustomTextFromField(
@@ -96,6 +108,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   prefixIconImage: 'Password',
                   controller: passwordController,
                   isPassword: true,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'PassWord can not be empty';
+                    }
+                    return null;
+                  },
                 ),
                 SizedBox(height: 20),
                 CustomTextFromField(
@@ -103,6 +121,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   prefixIconImage: 'Password',
                   controller: RepasswordController,
                   isPassword: true,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Confirm Password can not be empty';
+                    }
+                    return null;
+                  },
                 ),
                 SizedBox(height: 20),
                 CustomTextFromField(
@@ -110,6 +134,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   prefixIconImage: 'phone',
                   controller: PhoneController,
                   isPassword: false,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Phone Number can not be empty';
+                    }
+                    return null;
+                  },
                 ),
                 SizedBox(height: 25),
                 CustomElevatedButton(
